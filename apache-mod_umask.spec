@@ -6,7 +6,7 @@
 Summary:	Mod_umask sets the Unix umask of the Apache HTTPd process after it has started
 Name:		apache-%{mod_name}
 Version:	0.1.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		System/Servers
 License:	GPL
 URL:		http://www.outoforder.cc/projects/apache/mod_umask/
