@@ -1,0 +1,24 @@
+diff -Naur mod_umask-0.1.0/src/Makefile.am mod_umask-0.1.0.oden/src/Makefile.am
+--- mod_umask-0.1.0/src/Makefile.am	2004-10-12 21:08:50.000000000 +0200
++++ mod_umask-0.1.0.oden/src/Makefile.am	2006-08-01 16:13:38.000000000 +0200
+@@ -2,7 +2,7 @@
+ 
+ libmod_umask_la_SOURCES = mod_umask.c
+ libmod_umask_la_CFLAGS = -Wall ${XSLT_CFLAGS} ${MODULE_CFLAGS}
+-libmod_umask_la_LDFLAGS = ${XSLT_LIBS}
++libmod_umask_la_LDFLAGS = ${XSLT_LIBS} -module -avoid-version
+ 
+ lib_LTLIBRARIES = libmod_umask.la 
+ 
+diff -Naur mod_umask-0.1.0/src/Makefile.in mod_umask-0.1.0.oden/src/Makefile.in
+--- mod_umask-0.1.0/src/Makefile.in	2004-10-12 21:10:26.000000000 +0200
++++ mod_umask-0.1.0.oden/src/Makefile.in	2006-08-01 16:13:51.000000000 +0200
+@@ -191,7 +191,7 @@
+ CLEANFILES = .libs/libmod_umask *~
+ libmod_umask_la_SOURCES = mod_umask.c
+ libmod_umask_la_CFLAGS = -Wall ${XSLT_CFLAGS} ${MODULE_CFLAGS}
+-libmod_umask_la_LDFLAGS = ${XSLT_LIBS}
++libmod_umask_la_LDFLAGS = ${XSLT_LIBS} -module -avoid-version
+ lib_LTLIBRARIES = libmod_umask.la 
+ all: all-am
+ 
